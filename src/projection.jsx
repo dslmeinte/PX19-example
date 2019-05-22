@@ -4,10 +4,7 @@ import { HorizontalBox, PlaceholderBox, ReflectiveBox, TextBox, TextInputBox } f
 
 const generalHandleKeyForPlaceholder = box => (key => {
     console.log(`${box.id()}: key=${key}`)
-    if (key === "*") {
-        const parentNode = box.parentBox
-
-    }
+    // TODO  implement tree actions
 })
 
 
@@ -55,6 +52,8 @@ const projectLiteral = (node, parentBox, editState) => {
 /**
  * Projects node polymorphically, falling back to a read-only reflective
  * rendering for (meta-)types that aren't handled (yet).
+ * 
+ * 2nd argument gives access to boxes model that's already built up.
  */
 function projectNode(node, parentBox, editState) {
     if (editState.allReflective) {

@@ -21,7 +21,7 @@ if (focusNow) {
 // fire up React:
 render(
   <div>
-    <h1>Projectional DSLs from the ground up</h1>
+    <h1>Projectional Editing</h1>
     <label>Model:
         <select onChange={action(event => {
           store.model.setRoot(Model.modelRoots[event.target.value])

@@ -9,6 +9,7 @@ import { reflectiveRenderNode } from "./reflective"
     role = null
     parentBox = null
 
+    /** role is used to distinguish boxes belonging to the same node */
     constructor(node, role, parentBox) {
         this.node = node
         this.role = role
