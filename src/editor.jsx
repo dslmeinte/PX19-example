@@ -9,11 +9,14 @@ const DebugInfo = observer(({ editState, projection }) => <div>
             <input type="checkbox" onChange={event => { editState.setReflective(event.target.checked) }} />
         </label>
     </div>
-    <div>
-        <label>Show parentheses around all binary expressions?
-        <input type="checkbox" onChange={event => { editState.setWrapBinaryExpressions(event.target.checked) }} />
-        </label>
-    </div>
+    {editState.allReflective
+        ? null
+        : <div>
+            <label>Show parentheses around all binary expressions?
+            <input type="checkbox" onChange={event => { editState.setWrapBinaryExpressions(event.target.checked) }} />
+            </label>
+        </div>
+    }
     <div>
         <label>Focus id: </label><span>{editState.focusId ? <tt>{editState.focusId}</tt> : <i>(no focus)</i>}</span>
     </div>

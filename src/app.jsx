@@ -2,7 +2,7 @@ import React from "react"
 import { render } from "react-dom"
 import { action, configure } from "mobx"
 import { onError } from "mobx-react"
-import DevTools from 'mobx-react-devtools'
+import DevTools from "mobx-react-devtools"
 import { Editor } from "./editor"
 import { projectNode } from "./projection"
 import { Model, store } from "./store"

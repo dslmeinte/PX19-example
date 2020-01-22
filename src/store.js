@@ -61,14 +61,14 @@ const isNode = node => node.$id && node.$type
 class EditState {
 
     /**
-     * Determines whether all nodes should revert to a read-only reflective visualisation.
+     * Determines whether (the projection of) all nodes should revert to a read-only reflective visualisation.
      */
     @observable allReflective = false
     @action setReflective = reflective => { this.allReflective = reflective }
 
 
     /**
-     * Determines whether all binary expressions are wrapped in parentheses, to better reflect AST structure.
+     * Determines whether (the projection of) all binary expressions are wrapped in parentheses, to better reflect AST structure.
      */
     @observable wrapBinaryExpressions = false
     @action setWrapBinaryExpressions = value => { this.wrapBinaryExpressions = value }
